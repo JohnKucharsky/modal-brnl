@@ -50,8 +50,12 @@ const Modall = ({ setOpenModal, openModal }) => {
     }, 2000);
   };
   return (
-    <div className="modal">
-      <div className="modal__round">
+    <Modal
+      open={openModal}
+      onClose={() => setOpenModal(false)}
+      className="modal"
+    >
+      <Box className="modal__round">
         <div onClick={() => setOpenModal(false)} className="modal__close">
           <AiOutlineClose /> <span>ЗАКРЫТЬ</span>
         </div>
@@ -104,7 +108,7 @@ const Modall = ({ setOpenModal, openModal }) => {
                     </div>
                     <div>
                       {grown === 0 && "Без Взрослых"}
-                      {grown === 1 && "Один Взрослый"}
+                      {grown === 1 && "1 Взрослый"}
                       {grown > 1 && `${grown} Взрослых`}
                       <Increment s={2} grown={grown} setGrown={setGrown} />
                     </div>
@@ -115,7 +119,7 @@ const Modall = ({ setOpenModal, openModal }) => {
                   <div className="modal__content--childs">
                     <div>
                       {children === 0 && "Без Детей"}
-                      {children === 1 && "Один Ребенок"}
+                      {children === 1 && "1 Ребенок"}
                       {children > 1 && `${children} Детей`}
 
                       <Increment
@@ -182,8 +186,8 @@ const Modall = ({ setOpenModal, openModal }) => {
             </form>
           </div>
         </div>
-      </div>
-    </div>
+      </Box>
+    </Modal>
   );
 };
 

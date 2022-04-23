@@ -2,13 +2,13 @@
 .modal {
   background-color: rgba(37, 37, 37, 0.5);
   backdrop-filter: blur(4px);
-  position: fixed;
+  position: absolute;
   top: 0;
-  bottom: 0;
+  width: 100%;
   left: 0;
-  right: 0;
+  height: 100%;
   padding: 0.3rem;
-
+  overflow: auto;
   &__round {
     background-color: #00aaef;
     padding: 1.5rem;
@@ -16,7 +16,9 @@
     max-width: 1040px;
     border-radius: 10px;
     position: relative;
+
     @include md {
+      margin: 1rem auto 0 auto;
       padding: 1rem;
     }
   }
