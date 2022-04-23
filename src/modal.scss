@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   padding: 0.3rem;
-  display: none;
+
   &__round {
     background-color: #00aaef;
     padding: 1.5rem;
@@ -101,6 +101,7 @@
     &--date {
       display: flex;
       flex-direction: column;
+      width: 210px;
       @include md {
         width: 50%;
       }
@@ -244,9 +245,7 @@
     }
   }
 }
-.open {
-  display: block;
-}
+
 .width {
   @include md {
     width: 50%;

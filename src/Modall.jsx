@@ -50,12 +50,8 @@ const Modall = ({ setOpenModal, openModal }) => {
     }, 2000);
   };
   return (
-    <Modal
-      open={openModal}
-      onClose={() => setOpenModal(false)}
-      className="modal open"
-    >
-      <Box className="modal__round">
+    <div className="modal">
+      <div className="modal__round">
         <div onClick={() => setOpenModal(false)} className="modal__close">
           <AiOutlineClose /> <span>ЗАКРЫТЬ</span>
         </div>
@@ -186,8 +182,8 @@ const Modall = ({ setOpenModal, openModal }) => {
             </form>
           </div>
         </div>
-      </Box>
-    </Modal>
+      </div>
+    </div>
   );
 };
 
