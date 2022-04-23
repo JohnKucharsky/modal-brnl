@@ -1,0 +1,305 @@
+@use "./breakpoints" as *;
+.modal {
+  background-color: rgba(37, 37, 37, 0.5);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.3rem;
+  display: none;
+  &__round {
+    background-color: #00aaef;
+    padding: 1.5rem;
+    margin: 10rem auto 0 auto;
+    max-width: 1040px;
+    border-radius: 10px;
+    position: relative;
+    @include md {
+      padding: 1rem;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: -2.5rem;
+    right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    &:hover {
+      transform: scale(0.97);
+    }
+    svg {
+      font-size: 1.5rem;
+      transition: all 0.1s linear;
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+    @include md {
+      top: 2rem;
+      right: 2rem;
+      opacity: none;
+      span {
+        display: none;
+      }
+      svg {
+        color: #007fcc;
+      }
+    }
+  }
+  &__container {
+    background-color: #fff;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: 10px;
+  }
+  &__header {
+    text-align: center;
+    max-width: 800px;
+    margin: 1rem auto;
+    h2 {
+      padding: 1rem;
+      color: #007fcc;
+      font-size: 2.2rem;
+      @include md {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2.5rem;
+    margin-bottom: 1rem;
+    @include md {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0;
+    }
+  }
+  &__content {
+    max-width: 900px;
+    margin: 1px auto;
+    font-size: 1rem;
+    &--dates {
+      display: flex;
+      gap: 1rem;
+      @include md {
+        width: 100%;
+        align-items: flex-end;
+      }
+    }
+    &--date {
+      display: flex;
+      flex-direction: column;
+      @include md {
+        width: 50%;
+      }
+    }
+    &--last {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid #d7d7d7;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding: 0.4rem 0.8rem;
+      width: 174px;
+      @include md {
+        width: 100%;
+      }
+    }
+    &--quantity {
+      display: flex;
+      gap: 1rem;
+      @include md {
+        width: 100%;
+        align-items: flex-end;
+      }
+    }
+    &--grown {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid #d7d7d7;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding: 0.4rem 0.8rem;
+      width: 174px;
+      @include md {
+        width: 100%;
+      }
+    }
+    &--person {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      left: -2rem;
+      top: -0.5rem;
+      height: 2.5rem;
+      @include md {
+        display: none;
+      }
+    }
+    &--childs {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid #d7d7d7;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding: 0.4rem 0.8rem;
+      width: 160px;
+      @include md {
+        width: 100%;
+      }
+    }
+    &--number {
+      display: flex;
+      gap: 1rem;
+      @include md {
+        flex-direction: column;
+      }
+    }
+    &--num {
+      width: 210px;
+      @include md {
+        width: 100%;
+      }
+      input {
+        width: 210px;
+        @include md {
+          width: 100%;
+        }
+      }
+    }
+    &--name {
+      width: 100%;
+      input {
+        &::placeholder {
+          color: #252525;
+
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 1px auto;
+    font-size: 1rem;
+    padding: 1rem;
+    @include md {
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+    &--switch {
+      div {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &--submit {
+      padding: 1rem;
+      position: relative;
+      @include md {
+        padding: 1rem 0;
+        width: 100%;
+      }
+      button {
+        background: linear-gradient(270deg, #007fcc 0%, #00aaef 100%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        width: 340px;
+
+        height: 50px;
+        border: none;
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0.05em;
+        transition: all 0.1s linear;
+        &:hover {
+          transform: scale(0.99);
+        }
+        @include md {
+          width: 100%;
+        }
+      }
+      p {
+        font-size: 0.65rem;
+        position: absolute;
+        width: 90%;
+        text-align: center;
+      }
+    }
+  }
+}
+.open {
+  display: block;
+}
+.width {
+  @include md {
+    width: 50%;
+    user-select: none;
+    @include sm {
+      font-size: 0.8rem;
+    }
+  }
+}
+p {
+  @include md {
+    font-size: 14px;
+  }
+}
+p {
+  @include sm {
+    font-size: 10px;
+  }
+}
+// mui styles
+.css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked
+  + .MuiSwitch-track {
+  background-color: #fff !important;
+  border: 1.5px solid #e8e8e8 !important;
+}
+.css-1yjjitx-MuiSwitch-track {
+  background-color: #e8e8e8 !important;
+  border: 1.5px solid #e8e8e8 !important;
+}
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 0.4rem 0.8rem !important;
+}
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 10px !important;
+}
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 0.4rem 0.8rem !important;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 10px !important;
+}
+// mui styles
+
+.increment {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.4rem;
+  z-index: 1;
+  gap: 0.2rem;
+  @include sm {
+    bottom: 0.3rem;
+    gap: 0.15rem;
+  }
+}
