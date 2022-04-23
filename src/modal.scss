@@ -61,6 +61,9 @@
     background-color: #fff;
     padding: 1rem 1rem 3rem 1rem;
     border-radius: 10px;
+    @include sm {
+      padding: 1rem 0.5rem 4rem 0.5rem;
+    }
   }
   &__header {
     text-align: center;
@@ -118,6 +121,7 @@
       width: 174px;
       @include md {
         width: 100%;
+        padding: 0.4rem;
       }
     }
     &--quantity {
@@ -138,6 +142,7 @@
       width: 174px;
       @include md {
         width: 100%;
+        padding: 0.4rem;
       }
     }
     &--person {
@@ -161,6 +166,7 @@
       padding: 0.4rem 0.8rem;
       width: 160px;
       @include md {
+        padding: 0.4rem;
         width: 100%;
       }
     }

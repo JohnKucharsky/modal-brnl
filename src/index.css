@@ -20,37 +20,19 @@ p {
   width: 100%;
 }
 
-/* .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked
-  + .MuiSwitch-track {
+.Mui-checked + .MuiSwitch-track {
   background-color: #fff !important;
   border: 1.5px solid #e8e8e8 !important;
 }
-.css-1yjjitx-MuiSwitch-track {
+.MuiSwitch-track {
   background-color: #e8e8e8 !important;
   border: 1.5px solid #e8e8e8 !important;
 }
-.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+.MuiOutlinedInput-input,
+.MuiInputBase-input {
   padding: 0.4rem 0.8rem !important;
 }
-.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+.MuiOutlinedInput-root,
+.MuiInputBase-root {
   border-radius: 10px !important;
 }
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-  padding: 0.4rem 0.8rem !important;
-}
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
-  border-radius: 10px !important;
-}
-
-.css-1v4ccyo {
-  border-radius: 10px;
-}
-.css-1x5jdmq {
-  padding: 0.4rem 0.8rem !important;
-}
-.css-1v4ccyo {
-  border-radius: 10px;
-}
-.css-1x5jdmq {
-  padding: 0.4rem 0.8rem !important;
-} */
