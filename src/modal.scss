@@ -294,3 +294,21 @@ p {
     gap: 0.15rem;
   }
 }
+.app {
+  text-align: center;
+  button {
+    margin-top: 6rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007fcc;
+    border: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s linear;
+    &:hover {
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+        0 2px 4px -2px rgb(0 0 0 / 0.1);
+      background-color: #118dda;
+    }
+  }
+}
