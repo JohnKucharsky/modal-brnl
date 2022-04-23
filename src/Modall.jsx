@@ -64,7 +64,6 @@ const Modall = ({ setOpenModal, openModal, setOpenSuccess }) => {
         <div onClick={() => setOpenModal(false)} className="modal__close">
           <AiOutlineClose /> <span>ЗАКРЫТЬ</span>
         </div>
-        {progress && <LinearProgress style={{ zIndex: "10" }} />}
         <div className="modal__container">
           <div className="modal__header">
             <h2>Свободная путевка</h2>
@@ -73,6 +72,7 @@ const Modall = ({ setOpenModal, openModal, setOpenSuccess }) => {
               оптимальную путевку в этом или аналогичном санатории
             </p>
           </div>
+          {progress && <LinearProgress style={{ zIndex: "10" }} />}
           <div className="modal__content">
             <div className="modal__top">
               <div className="modal__content--dates">
