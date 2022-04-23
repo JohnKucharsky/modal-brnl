@@ -120,12 +120,11 @@
       border-radius: 10px;
       padding: 0.4rem 0.8rem;
       width: 174px;
-      @include md {
-        width: 100%;
-        padding: 0.4rem;
-      }
       @include sm {
         padding: 0.4rem;
+      }
+      @include md {
+        width: 100%;
       }
     }
     &--quantity {
@@ -144,11 +143,11 @@
       border-radius: 10px;
       padding: 0.4rem 0.8rem;
       width: 174px;
-      @include md {
-        width: 100%;
-      }
       @include sm {
         padding: 0.4rem;
+      }
+      @include md {
+        width: 100%;
       }
     }
     &--person {
@@ -171,11 +170,11 @@
       border-radius: 10px;
       padding: 0.4rem 0.8rem;
       width: 160px;
-      @include md {
-        width: 100%;
-      }
       @include sm {
         padding: 0.4rem;
+      }
+      @include md {
+        width: 100%;
       }
     }
     &--number {
