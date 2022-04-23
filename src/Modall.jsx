@@ -47,7 +47,6 @@ const Modall = ({ setOpenModal, openModal, setOpenSuccess }) => {
       data,
       "yksvOEorfKNnkaCqx"
     );
-
     setTimeout(() => {
       setOpenModal(false);
       setOpenSuccess(true);
@@ -182,7 +181,7 @@ const Modall = ({ setOpenModal, openModal, setOpenSuccess }) => {
                   </div>
                 </div>
                 <div className="modal__footer--submit">
-                  <button>НАЙТИ</button>
+                  <button disabled={progress}>НАЙТИ</button>
                   <p>
                     Нажимая "Найти", вы даёте согласие на обработку персональных
                     данных в соответствии с
