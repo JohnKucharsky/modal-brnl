@@ -12,6 +12,7 @@ import Icon from "./components/Icon";
 import Person from "./components/Person";
 import { AiOutlineClose } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
+import Dots from "./components/Dots";
 
 const Modall = ({ setOpenModal, openModal }) => {
   const [date, setDate] = useState(new Date());
@@ -82,6 +83,7 @@ const Modall = ({ setOpenModal, openModal }) => {
                       )}
                     />
                   </LocalizationProvider>
+                  <Dots />
                 </div>
                 <div className="width">
                   <p>Продолжительность</p>
