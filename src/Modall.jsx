@@ -1,6 +1,6 @@
 import { Box, Switch, TextField } from "@mui/material";
 import Modal from "@mui/material/Modal";
-import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
+
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import { useState } from "react";
@@ -18,7 +18,6 @@ const Modall = ({ setOpenModal, openModal }) => {
   const [duration, setDuration] = useState(1);
   const [children, setChildren] = useState(1);
   const [grown, setGrown] = useState(1);
-  const [change, setChange] = useState(false);
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
   const [diff, setDiff] = useState(true);
@@ -26,13 +25,7 @@ const Modall = ({ setOpenModal, openModal }) => {
   const handleChangeDate = (val) => {
     setDate(val);
   };
-  window.onresize = () => {
-    if (window.innerWidth < 846) {
-      setChange(true);
-    } else {
-      setChange(false);
-    }
-  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     var data = {
@@ -80,27 +73,14 @@ const Modall = ({ setOpenModal, openModal }) => {
                 <div className="modal__content--date">
                   <p>Дата заезда</p>
                   <LocalizationProvider dateAdapter={AdapterDateFns}>
-                    {!change && (
-                      <DesktopDatePicker
-                        label=""
-                        inputFormat="MM/dd/yyyy"
-                        value={date}
-                        onChange={handleChangeDate}
-                        renderInput={(params) => (
-                          <TextField {...params} sx={{ width: "210px" }} />
-                        )}
-                      />
-                    )}
-                    {change && (
-                      <MobileDatePicker
-                        label=""
-                        value={date}
-                        onChange={handleChangeDate}
-                        renderInput={(params) => (
-                          <TextField {...params} sx={{ width: "100%" }} />
-                        )}
-                      />
-                    )}
+                    <MobileDatePicker
+                      label=""
+                      value={date}
+                      onChange={handleChangeDate}
+                      renderInput={(params) => (
+                        <TextField {...params} sx={{ width: "100%" }} />
+                      )}
+                    />
                   </LocalizationProvider>
                 </div>
                 <div className="width">
