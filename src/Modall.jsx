@@ -1,4 +1,4 @@
-import { Box, Switch, TextField } from "@mui/material";
+import { Box, LinearProgress, Switch, TextField } from "@mui/material";
 import Modal from "@mui/material/Modal";
 
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
@@ -14,7 +14,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
 import Dots from "./components/Dots";
 
-const Modall = ({ setOpenModal, openModal }) => {
+const Modall = ({ setOpenModal, openModal, setOpenSuccess }) => {
   const [date, setDate] = useState(new Date());
   const [duration, setDuration] = useState(1);
   const [children, setChildren] = useState(1);
@@ -23,12 +23,14 @@ const Modall = ({ setOpenModal, openModal }) => {
   const [name, setName] = useState("");
   const [diff, setDiff] = useState(true);
   const [agree, setAgree] = useState(false);
+  const [progress, setProgress] = useState(false);
   const handleChangeDate = (val) => {
     setDate(val);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setProgress(true);
     var data = {
       date,
       duration,
@@ -48,6 +50,8 @@ const Modall = ({ setOpenModal, openModal }) => {
 
     setTimeout(() => {
       setOpenModal(false);
+      setOpenSuccess(true);
+      setProgress(false);
     }, 2000);
   };
   return (
@@ -60,6 +64,7 @@ const Modall = ({ setOpenModal, openModal }) => {
         <div onClick={() => setOpenModal(false)} className="modal__close">
           <AiOutlineClose /> <span>ЗАКРЫТЬ</span>
         </div>
+        {progress && <LinearProgress style={{ zIndex: "10" }} />}
         <div className="modal__container">
           <div className="modal__header">
             <h2>Свободная путевка</h2>
